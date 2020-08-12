@@ -48,6 +48,7 @@ def restore():
 		try:
 			convert = "<string name=\"%s\">%s</string>" % (lineVar[x], line[x])
 			wr = codecs.open("result/xml.txt", "a", "utf-8");
+			wr.write(convert + os.linesep)
 			print(tag+convert)
 
 		except Exception as e:
